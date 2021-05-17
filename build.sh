@@ -239,7 +239,6 @@ function run_docker_container() {
     echo "--------------------------------------------"
     echo "  Create prerequisite Folder [SuperUser]"
     echo "--------------------------------------------"
-
     sudo ./tools/create_fs.sh
     echo ""
     echo "**********************************"
