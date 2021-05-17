@@ -10,7 +10,6 @@ fs=(
     "/var/edge-orchestration/user"
     "/var/edge-orchestration/mnedc"
     "/var/edge-orchestration/datastorage"
-
 )
 
 # Create file system for edge-orchestration
