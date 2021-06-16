@@ -72,8 +72,7 @@ FailWaitTime = 10
 2. Run the EdgeX Docker containers on your Linux machine (**Device B**) with respect to the guidance from [EdgeX Foundry Services](https://github.com/edgexfoundry/edgex-go#get-started), as the _simplest way_ that you can follow using follows;
 
 ```sh
-wget -O docker-compose.yml \
-https://raw.githubusercontent.com/edgexfoundry/developer-scripts/master/releases/geneva/compose-files/docker-compose-geneva-mongo-no-secty.yml
+cd deployments/datastorage
 
 docker-compose up -d
 ```
