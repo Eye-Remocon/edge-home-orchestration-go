@@ -26,6 +26,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	dbhelper "github.com/lf-edge/edge-home-orchestration-go/internal/db/helper"
 )
 
 const (
@@ -53,10 +54,12 @@ type StorageImpl struct {
 var (
 	deviceName string
 	storageIns *StorageImpl
+	dbIns dbhelper.MultipleBucketQuery
 )
 
 func init() {
-	deviceID, _ := getDeviceID()
+	dbIns = dbhelper.GetInstance()
+	deviceID, _ := dbIns.GetDeviceID()
 	deviceName = "edge-orchestration-" + deviceID
 	storageIns = &StorageImpl{
 		sd:     storagedriver.StorageDriver{},
